@@ -1,0 +1,3 @@
+[submodule "orb_slam3"]
+	path = orb_slam3
+	url = https://gooeylouis@bitbucket.org/gooeylouis/orb_slam3
