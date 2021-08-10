@@ -1,0 +1,20 @@
+package eflcm;
+
+struct Frame
+{
+	boolean trackOnly;
+	boolean compressed;
+	boolean last;
+	
+	int32_t depthSize;
+	int32_t imageSize;
+
+	byte depth[depthSize];
+	byte image[imageSize];
+
+	int64_t timestamp;
+
+	int32_t frameNumber;
+
+	string senderName;
+}
