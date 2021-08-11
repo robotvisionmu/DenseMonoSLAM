@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/louis/Development/DataAnalysis/iclnuim/CanyonToLcm.cpp
+zlib.h
+-
+boost/thread.hpp
+-
+iostream
+-
+cassert
+-
+fstream
+-
+string
+-
+stdio.h
+-
+opencv2/opencv.hpp
+-
+opencv2/highgui/highgui.hpp
+-
+eigen3/Eigen/Core
+-
+eigen3/Eigen/LU
+-
+lcm/lcm-cpp.hpp
+-
+lcmtypes/eflcm/Frame.hpp
+/home/louis/Development/DataAnalysis/iclnuim/lcmtypes/eflcm/Frame.hpp
+
+/home/louis/Development/DataAnalysis/iclnuim/lcmtypes/eflcm/Frame.hpp
+lcm/lcm_coretypes.h
+-
+vector
+-
+string
+-
+

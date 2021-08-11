@@ -1,0 +1,63 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/louis/Development/DataAnalysis/iclnuim/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f5e63/fast && /usr/bin/make -f CMakeFiles/cmTC_f5e63.dir/build.make CMakeFiles/cmTC_f5e63.dir/build
+make[1]: Entering directory '/home/louis/Development/DataAnalysis/iclnuim/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f5e63.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_f5e63.dir/src.c.o   -c /home/louis/Development/DataAnalysis/iclnuim/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_f5e63
+/opt/cmake-3.16.4-Linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f5e63.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_f5e63.dir/src.c.o  -o cmTC_f5e63 
+CMakeFiles/cmTC_f5e63.dir/src.c.o: In function `main':
+src.c:(.text+0x3c): undefined reference to `pthread_create'
+src.c:(.text+0x48): undefined reference to `pthread_detach'
+src.c:(.text+0x59): undefined reference to `pthread_join'
+src.c:(.text+0x6d): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_f5e63.dir/build.make:86: recipe for target 'cmTC_f5e63' failed
+make[1]: *** [cmTC_f5e63] Error 1
+make[1]: Leaving directory '/home/louis/Development/DataAnalysis/iclnuim/build/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_f5e63/fast' failed
+make: *** [cmTC_f5e63/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/louis/Development/DataAnalysis/iclnuim/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a9e05/fast && /usr/bin/make -f CMakeFiles/cmTC_a9e05.dir/build.make CMakeFiles/cmTC_a9e05.dir/build
+make[1]: Entering directory '/home/louis/Development/DataAnalysis/iclnuim/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a9e05.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a9e05.dir/CheckFunctionExists.c.o   -c /opt/cmake-3.16.4-Linux-x86_64/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a9e05
+/opt/cmake-3.16.4-Linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a9e05.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_a9e05.dir/CheckFunctionExists.c.o  -o cmTC_a9e05  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_a9e05.dir/build.make:86: recipe for target 'cmTC_a9e05' failed
+make[1]: *** [cmTC_a9e05] Error 1
+make[1]: Leaving directory '/home/louis/Development/DataAnalysis/iclnuim/build/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_a9e05/fast' failed
+make: *** [cmTC_a9e05/fast] Error 2
+
+
+
