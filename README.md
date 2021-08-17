@@ -135,3 +135,15 @@ An example of running a collaborative 2 camera session with ICL-NUIM:
 ```
 ./ElasticFusion --l sequence_1.lcm --l sequence_2.lcm --n 2 --nf 2 --cal calib.txt
 ```
+
+# Citation
+```
+@inproceedings{GallagherECMR21,
+author = {L. Gallagher and V. Kumar and S. Yogamani and J.B. McDonald},
+title = {A Hybrid Sparse-Dense Monocular SLAM System For Autonomous Driving},
+booktitle = {European Conference on Mobile Robotics, ECMR},
+address = {Bonn, Germany},
+month = {August},
+year = {2021}
+}
+``` 
