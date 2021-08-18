@@ -4,9 +4,9 @@ The code base also supports collaborative mapping sessions with multiple indepen
 
 # Related Publication
 Please cite this work if you make use of our system in your own research.
-- __A Hybrid Sparse-Dense Monocular SLAM framework for Autonomous Driving__, _Louis Gallagher, Varun Ravi Kumar, Senthil Yogamani and John B. McDonald_, ECMR'21 
-- [__Collaborative Dense SLAM__](https://arxiv.org/abs/1811.07632), _Louis Gallagher & John B, McDonald_, IMVIP'18, _Best Paper Winner_
+- [__A Hybrid Sparse-Dense Monocular SLAM System for Autonomous Driving__](https://arxiv.org/abs/2108.07736), _Louis Gallagher, Varun Ravi Kumar, Senthil Yogamani and John B. McDonald_, ECMR'21 
 - [__Efficient Surfel Fusion Using Normalised Information Distance__](https://arxiv.org/abs/2108.05163), _Louis Gallagher & John B. McDonald_, CVPR'19 Workshop 3D Scene Understanding for Vision, Graphics and Robotics
+- [__Collaborative Dense SLAM__](https://arxiv.org/abs/1811.07632), _Louis Gallagher & John B, McDonald_, IMVIP'18, _Best Paper Winner_
 
 # Building The System
 First checkout the code and all of the submodules. Change directory into the orb_slam subdirectory and follow the build instructions there. Next change directory into the ElasticFusion sub directory and follow the build instructions there. 
@@ -35,7 +35,7 @@ struct Frame
 	string senderName;
 }
 ```
-A log file can be specified upon launch of the system from the command line. Alternatively, a LCM channel can be specified, the system will then listen to that channel for LCM packets. Sample data of a sequence from the KITTI odometry benchmark is available [here]().
+A log file can be specified upon launch of the system from the command line. Alternatively, a LCM channel can be specified, the system will then listen to that channel for LCM packets. A program for streaming frames using LCM from an ASUS Xtion pro and a Intel Realsense can be found [here](https://github.com/LouisGallagher/Logger2). Sample data of a sequence from the KITTI odometry benchmark is available [here](http://www.cs.nuim.ie/research/vision/data/ecmr2021/index.php).
 
 ## Generating Your Own Data
 To generate your own data from the ICL-NUIM dataset, the TUM RGB-D and KITTI we have provided a set of translation tools in the [log](./log) sub directory.
